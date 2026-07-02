@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Database App FDeveloper</title>
+    <style>
+        body { font-family: Calibri, Arial, sans-serif; padding: 20px; background-color: white; }
+        table { width: 100%; border-collapse: collapse; }
+        th { background-color: #6C7A89; color: white; padding: 10px; border: 1px solid #D0D3D4; text-align: center; font-weight: bold; }
+        td { padding: 8px; border: 1px solid #D0D3D4; vertical-align: middle; }
+        .input-text { width: 100%; border: none; background: transparent; outline: none; font-family: Calibri; font-size: 11pt; }
+        button { margin-top: 10px; padding: 10px 20px; background-color: #6C7A89; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #5a6673; }
+    </style>
+</head>
+<body>
+
+<table id="tabelAplikasi">
+    <thead>
+        <tr>
+            <th>App</th>
+            <th>App Code</th>
+            <th>For Windows/Mac/Linux</th>
+            <th>Di buat Oleh</th>
+            <th>Status</th>
+            <th>Developer</th>
+            <th>Realease</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><input type="text" class="input-text" value="Cldisk [Clean Disk]"></td>
+            <td><input type="text" class="input-text" value="FD01227"></td>
+            <td><input type="text" class="input-text" value="Windows"></td>
+            <td><input type="text" class="input-text" value="Python"></td>
+            <td><input type="text" class="input-text" value="Online"></td>
+            <td><input type="text" class="input-text" value="Tn Faizan"></td>
+            <td><input type="text" class="input-text" value="Last week"></td>
+        </tr>
+        <tr>
+            <td><input type="text" class="input-text" value="CLS"></td>
+            <td><input type="text" class="input-text" value="FD020809"></td>
+            <td><input type="text" class="input-text" value="Windows"></td>
+            <td><input type="text" class="input-text" value="Python"></td>
+            <td><input type="text" class="input-text" value="online"></td>
+            <td><input type="text" class="input-text" value="Tn Faizan"></td>
+            <td><input type="text" class="input-text" value="Last week"></td>
+        </tr>
+        <tr>
+            <td><input type="text" class="input-text" value="FDevStudio"></td>
+            <td><input type="text" class="input-text" value="FD030504"></td>
+            <td><input type="text" class="input-text" value="Windows"></td>
+            <td><input type="text" class="input-text" value="Python"></td>
+            <td><input type="text" class="input-text" value="Online"></td>
+            <td><input type="text" class="input-text" value="Tn Faizan"></td>
+            <td><input type="text" class="input-text" value="Last week"></td>
+        </tr>
+    </tbody>
+</table>
+
+<button onclick="tambahBaris()">+ Tambah Baris</button>
+
+<script>
+    function tambahBaris() {
+        var table = document.getElementById("tabelAplikasi").getElementsByTagName('tbody')[0];
+        var newRow = table.insertRow();
+        for (var i = 0; i < 7; i++) {
+            var cell = newRow.insertCell(i);
+            cell.innerHTML = '<input type="text" class="input-text">';
+            cell.style.border = "1px solid #D0D3D4";
+        }
+    }
+</script>
+
+</body>
+</html>
